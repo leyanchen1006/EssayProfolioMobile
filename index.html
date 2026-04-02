@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>乔治与他的朋友们</title>
+  <meta
+    name="description"
+    content="乔治与他的朋友们，适合手机阅读的文学作品页面。"
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell mobile-reading">
+    <header class="hero">
+      <nav class="topbar" aria-label="页面导航">
+        <p class="brand">Geroge & Its Friends</p>
+        <div class="nav-links">
+          <a href="#timeline">时间</a>
+          <a href="#characters">人物</a>
+          <a href="#collection">作品</a>
+        </div>
+      </nav>
+
+      <div class="hero-content">
+        <div class="hero-copy">
+          <h1>乔治与他的朋友们</h1>
+          <p class="hero-text">
+            乔治是一只特立独行的猪，在某一天它跳进了太平洋，随着洋流来到了纽约。于是它开始记录...
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section timeline-section" id="timeline">
+        <div class="section-heading simple-heading"></div>
+        <div class="timeline-filters" id="year-filters"></div>
+        <div class="timeline-list" id="timeline-list"></div>
+      </section>
+
+      <section class="section characters-section" id="characters">
+        <div class="section-heading simple-heading"></div>
+        <div class="character-chips" id="character-filters"></div>
+        <div class="character-grid" id="character-grid"></div>
+      </section>
+
+      <section class="section collection-section" id="collection">
+        <div class="section-heading simple-heading"></div>
+        <div class="works-grid" id="works-grid"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
