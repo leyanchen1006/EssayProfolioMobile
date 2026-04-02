@@ -544,17 +544,17 @@ const chapterTitles = new Map(
 const seasonDefinitions = [
   {
     key: "2026-spring",
-    label: "2026年春",
+    label: "2026 · 春",
     match: (work) => work.date >= "2026-01-01"
   },
   {
     key: "2025-winter",
-    label: "2025年冬",
+    label: "2025 · 冬",
     match: (work) => work.date >= "2025-11-01" && work.date <= "2025-12-31"
   },
   {
     key: "2025-autumn",
-    label: "2025年秋",
+    label: "2025 · 秋",
     match: (work) => work.date >= "2025-08-01" && work.date <= "2025-10-31"
   }
 ];
