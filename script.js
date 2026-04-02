@@ -537,7 +537,19 @@ const formatter = new Intl.DateTimeFormat("zh-CN", {
 });
 
 const sortedWorks = [...works].sort((a, b) => b.date.localeCompare(a.date));
-const chronologicalWorks = [...works].sort((a, b) => a.date.localeCompare(b.date));
+const chapterOrderOverrides = {
+  "2026-01-07-friends": 0,
+  "2026-01-07-best-arrangement": 1
+};
+
+const chronologicalWorks = [...works].sort((a, b) => {
+  const dateCompare = a.date.localeCompare(b.date);
+  if (dateCompare !== 0) return dateCompare;
+  const aOrder = chapterOrderOverrides[a.id] ?? 999;
+  const bOrder = chapterOrderOverrides[b.id] ?? 999;
+  if (aOrder !== bOrder) return aOrder - bOrder;
+  return 0;
+});
 const chapterTitles = new Map(
   chronologicalWorks.map((work, index) => [work.id, `Chapter ${index + 1}`])
 );
